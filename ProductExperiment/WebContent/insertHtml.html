@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+function validate(){
+	var name=document.form.nm.value;
+	var price=document.form.price.value;
+	var quantity=document.form.quantity.value;
+	var digitOnlyPat=/[0-9]+/;
+	if(digitOnlyPat.test(quantity)==false) {
+		alert("Quantity is not number");
+	} else if(digitOnlyPat.test(price)==false){
+		alert("Price is not number");
+	} else if(name==null || name==""){
+		alert("Name not inserted.");
+	} else if(price==null || price=="") {
+		alert("Price not inserted.");
+	} else if(quantity==null || quantity=="") {
+		alert("Quantity not inserted.");
+	} else {
+		return true;
+	}
+	return false;
+}
+</script>
+	<table style="width:100%;">
+		<tr>
+			<td align="center">
+				<form action="insert" method="post" name="form" onsubmit="return (validate());">
+					<fieldset>
+						<legend>Insert Product</legend>
+						<table>
+							<tr><td>Product Name:</td><td><input type="text" name="nm" > </td>       </tr>
+							<tr><td>Product Price:</td><td><input type="text" name="price" > </td>    </tr>
+							<tr><td>Product Quantity:</td><td><input type="text" name="quantity" > </td> </tr>
+							<tr><td colspan="2" align="center"><input type="submit" value="Insert Product" /> </td></tr>
+						</table>
+					</fieldset>
+				</form>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
