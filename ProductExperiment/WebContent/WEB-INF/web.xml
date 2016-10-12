@@ -6,10 +6,21 @@
 	<servlet-name>AddProduct</servlet-name>
 	<servlet-class>com.operations.AddProduct</servlet-class>
 	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>Display</display-name>
+		<servlet-name>Display</servlet-name>
+		<servlet-class>com.operations.Display</servlet-class>
+	</servlet>
 	
 	<servlet-mapping>
 	<servlet-name>AddProduct</servlet-name>
 	<url-pattern>/addproduct</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Display</servlet-name>
+		<url-pattern>/display</url-pattern>
 	</servlet-mapping>
 	
 	<welcome-file-list>
